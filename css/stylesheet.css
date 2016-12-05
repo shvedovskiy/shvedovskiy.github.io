@@ -45,15 +45,15 @@ header {
 }
 
 #spbsu-item {
-    list-style-image: url(/images/_spbsu_logo.png);
+    list-style-image: url(../images/_spbsu_logo.png);
 }
 
 #polytech-item {
-    list-style-image: url(/images/_polytech_logo.png);
+    list-style-image: url(../images/_polytech_logo.png);
 }
 
 #technopolis-item {
-    list-style-image: url(/images/_technopolis_logo.png);
+    list-style-image: url(../images/_technopolis_logo.png);
 }
 
 #computer-section .title {
