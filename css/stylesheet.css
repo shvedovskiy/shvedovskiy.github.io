@@ -30,12 +30,22 @@ header {
     padding: 10px 0;
 }
 
+.button-element {
+    margin-top: 25px;
+}
+
 #info-section {
     padding: 10px 10px 20px 15px;
 }
 
 .nobullets {
     list-style: none;
+}
+
+#graduate-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 #graduate-section {
@@ -45,16 +55,48 @@ header {
 }
 
 #spbsu-item {
-    list-style-image: url(../images/_spbsu_logo.png);
+    background-image: url(../images/_spbsu_logo.png);
+    background-repeat: no-repeat;
+    padding-left: 3.2em;
+    padding-bottom: .75em;
+    padding-top: .75em;
 }
 
 #polytech-item {
-    list-style-image: url(../images/_polytech_logo.png);
+    background-image: url(../images/_polytech_logo.png);
+    background-repeat: no-repeat;
+    padding-left: 3.2em;
+    padding-bottom: .75em;
+    padding-top: .75em;
 }
 
 #technopolis-item {
+    background-image: url(../images/_technopolis_logo.png);
+    background-repeat: no-repeat;
+    padding-left: 3.2em;
+    padding-bottom: .75em;
+    padding-top: .75em;
+}
+
+
+/*
+#spbsu-item {
+    list-style-image: url(../images/_spbsu_logo.png);
+}
+*/
+
+
+/*
+#polytech-item {
+    list-style-image: url(../images/_polytech_logo.png);
+}
+*/
+
+/*
+#technopolis-item {
     list-style-image: url(../images/_technopolis_logo.png);
 }
+*/
 
 #computer-section .title {
     letter-spacing: normal;
