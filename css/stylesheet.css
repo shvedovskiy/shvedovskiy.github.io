@@ -55,7 +55,7 @@ header {
 }
 
 #spbsu-item {
-    background-image: url('../images/_spbsu_logo.png');
+    background-image: url('https://github.com/shvedovskiy/shvedovskiy.github.io/tree/master/images/_spbsu_logo.png');
     background-repeat: no-repeat;
     padding-left: 3.2em;
     padding-bottom: .75em;
@@ -63,7 +63,7 @@ header {
 }
 
 #polytech-item {
-    background-image: url('../images/_polytech_logo.png');
+    background-image: url('https://github.com/shvedovskiy/shvedovskiy.github.io/tree/master/images/_polytech_logo.png');
     background-repeat: no-repeat;
     padding-left: 3.2em;
     padding-bottom: .75em;
@@ -71,7 +71,7 @@ header {
 }
 
 #technopolis-item {
-    background-image: url('../images/_technopolis_logo.png');
+    background-image: url('https://github.com/shvedovskiy/shvedovskiy.github.io/tree/master/images/_technopolis_logo.png');
     background-repeat: no-repeat;
     padding-left: 3.2em;
     padding-bottom: .75em;
