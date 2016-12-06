@@ -54,28 +54,8 @@ header {
     padding-bottom: 20px;
 }
 
-#spbsu-item {
-    background-image: url('../images/_spbsu_logo.png');
-    background-repeat: no-repeat;
-    padding-left: 3.2em;
-    padding-bottom: .75em;
-    padding-top: .75em;
-}
-
-#polytech-item {
-    background-image: url('../images/_polytech_logo.png');
-    background-repeat: no-repeat;
-    padding-left: 3.2em;
-    padding-bottom: .75em;
-    padding-top: .75em;
-}
-
-#technopolis-item {
-    background-image: url('../images/_technopolis_logo.png');
-    background-repeat: no-repeat;
-    padding-left: 3.2em;
-    padding-bottom: .75em;
-    padding-top: .75em;
+.item-text {
+    padding-left: .75em;
 }
 
 
