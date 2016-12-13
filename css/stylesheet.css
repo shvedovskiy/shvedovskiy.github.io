@@ -1,6 +1,8 @@
 html,
 body {
     height: 100%;
+    font-family: "ALS Story", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    ;
 }
 
 * {
@@ -119,4 +121,25 @@ footer p {
     font-size: 0.77em;
     letter-spacing: 0.25em;
     color: dimgrey;
+}
+
+@font-face {
+    font-family: 'ALS Story';
+    src: url('fonts/ALS Story Regular.eot') format('eot'), url('fonts/ALS Story Regular.woff') format('woff'), url('fonts/ALS Story Regular.ttf') format('truetype'), url('fonts/ALS Story Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ALS Story';
+    src: url('fonts/ALS Story Bold.eot?') format('eot'), url('fonts/ALS Story Bold.woff') format('woff'), url('fonts/ALS Story Bold.ttf') format('truetype'), url('fonts/ALS Story Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ALS Story';
+    src: url('fonts/ALS Story Bold Italic.eot?') format('eot'), url('fonts/ALS Story Bold Italic.woff') format('woff'), url('fonts/ALS Story Bold Italic.ttf') format('truetype'), url('fonts/ALS Story Bold Italic.svg') format('svg');
+    font-weight: bold;
+    font-style: italic;
 }
