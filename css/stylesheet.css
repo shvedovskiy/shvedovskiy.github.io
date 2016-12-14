@@ -1,5 +1,6 @@
 html,
 body {
+    background-color: #444;
     height: 100%;
     font-family: "ALS Story", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -12,6 +13,7 @@ body {
 
 header {
     padding-top: 25px;
+    background-color: white;
 }
 
 .main-title,
@@ -36,6 +38,7 @@ header {
 }
 
 #info-section {
+    background-color: white;
     padding: 10px 10px 20px 15px;
 }
 
@@ -97,10 +100,13 @@ header {
 }
 
 #contacts-section {
-    padding-top: 25px;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
     font-size: 3em;
     letter-spacing: 0.2em;
     text-align: center;
+    background-color: white;
 }
 
 .contacts-content {
@@ -113,13 +119,28 @@ header {
 }
 
 footer {
-    margin: -20px;
+    background-color: #444;
+    margin: -10px;
 }
 
 footer p {
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 0.77em;
+    font-weight: 100;
     letter-spacing: 0.25em;
-    color: dimgrey;
+    color: #b2b2b2;
+}
+
+@media (max-width: 635px) and (min-width: 550px) {
+    .my-photo {
+        content: url(http://placehold.it/130x130/);
+    }
+}
+
+@media (min-width: 900px) {
+    .my-photo {
+        content: url(http://placehold.it/200x200/);
+    }
 }
 
 @font-face {
