@@ -46,6 +46,66 @@ header {
     list-style: none;
 }
 
+.mail, .copy {
+    float: left;
+    border: 0;
+    cursor: pointer;
+}
+
+.mail {
+    padding: 4px 3px 3px 6px;
+    border: dashed 1px #1EAEDB;
+}
+
+.mail:hover {
+    border: dashed 1px #0FA0CE;
+}
+
+.copy {
+    display: none;
+    position: relative;
+    padding: 3px;
+    font-size: 0.8em;
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #1EAEDB;
+}
+
+.mail:hover + .copy,
+.copy:hover {
+    display: block;
+}
+
+.copied::after {
+    position: absolute;
+    top: -80%;
+    right: -15%;
+    display: block;
+    content: "Copied";
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 2px 3px;
+    color: #1EAEDB;
+    opacity: 0;
+    will-change: opacity, transform;
+    animation: showcopied 0.5s ease-in-out;
+}
+
+@keyframes showcopied {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    15% {
+        opacity: 0.8;
+    }
+    70% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+}
+
 #graduate-section ul {
     list-style-type: none;
     padding: 0;

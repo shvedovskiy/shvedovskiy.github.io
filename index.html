@@ -83,9 +83,12 @@
                     </li>
                     <li>Программист, прикладной математик</li>
                     <li>Интересуюсь разработкой веб-сервисов, бекэндом, алгоритмами</li>
-                    <li>Ищу практический опыт в Java-разработке, хочу начать карьеру в этой сфере</li>
+                    <li>Ищу практический опыт в Python-разработке, хочу начать карьеру в этой сфере</li>
                     <li><a href="https://github.com/shvedovskiy/" title="Oleg's projects" target="_blank">github.com/shvedovskiy</a></li>
-                    <li><a href="mailto:ol.shvedov@gmail.com" title="Write an email">ol.shvedov@gmail.com</a></li>
+                    <li>
+                        <input class="mail" type="text" id="mail" value="ol.shvedov@gmail.com">
+                        <span class="copy" data-copytarget="#mail">Copy</span>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -134,13 +137,13 @@
                     <h5 class="title">Владею следующими технологиями:</h5>
                     <ul>
                         <li>
-                            <strong>Java-программирование:</strong> Java Collections API, Maven, JUnit, JaCoCo, JMH
-                        </li>
-                        <li>
                             <strong>Веб-программирование:</strong> HTML, CSS, LESS, jQuery, Bootstrap, Skeleton, адаптивная вёрстка
                         </li>
                         <li>
                             <strong>Веб-фреймворки:</strong> Django, Flask
+                        </li>
+                        <li>
+                            <strong>Java-программирование:</strong> Java Collections API, Maven, JUnit, JaCoCo, JMH
                         </li>
                         <li>
                             <strong>Базы данных:</strong> опыт использования MySQL, PostgreSQL, реляционная теория
@@ -213,6 +216,28 @@
             </div>
         </div>
     </footer>
-</body>
 
+    <script>
+        (function() {
+            'use strict';
+            document.body.addEventListener('click', copy, true);
+            function copy(e) {
+                var t = e.target, c = t.dataset.copytarget, inp = (c ? document.querySelector(c) : null);
+                if (inp && inp.select) {
+                    inp.select();
+                    try {
+                        document.execCommand('copy');
+                        inp.blur();
+                        t.classList.add('copied');
+                        setTimeout(function() {
+                           t.classList.remove('copied');
+                        }, 1500);
+                    } catch (err) {
+                        alert('Нажмите Ctrl/Cmd+C для копирования текста в буфер обмена');
+                    }
+                }
+            }
+        })();
+    </script>
+</body>
 </html>
