@@ -46,7 +46,8 @@ header {
     list-style: none;
 }
 
-.mail, .copy {
+.mail,
+.copy {
     float: left;
     border: 0;
     cursor: pointer;
@@ -78,20 +79,22 @@ header {
 .copied::after {
     position: absolute;
     top: -80%;
-    right: -15%;
+    right: -7%;
     display: block;
-    content: "Copied";
+    content: "Скопировано";
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 2px 3px;
     color: #1EAEDB;
     opacity: 0;
     will-change: opacity, transform;
+    -webkit-animation: showcopied 0.5s ease-in-out;
     animation: showcopied 0.5s ease-in-out;
 }
 
-@keyframes showcopied {
+@-webkit-keyframes showcopied {
     0% {
         opacity: 0;
+        -webkit-transform: translateY(100%);
         transform: translateY(100%);
     }
     15% {
@@ -102,6 +105,26 @@ header {
     }
     100% {
         opacity: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes showcopied {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    15% {
+        opacity: 0.8;
+    }
+    70% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
     }
 }

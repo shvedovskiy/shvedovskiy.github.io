@@ -87,7 +87,7 @@
                     <li><a href="https://github.com/shvedovskiy/" title="Oleg's projects" target="_blank">github.com/shvedovskiy</a></li>
                     <li>
                         <input class="mail" type="text" id="mail" value="ol.shvedov@gmail.com">
-                        <span class="copy" data-copytarget="#mail">Copy</span>
+                        <span class="copy" data-copytarget="#mail">Копировать</span>
                     </li>
                 </ul>
             </div>
@@ -218,20 +218,23 @@
     </footer>
 
     <script>
-        (function() {
+        (function () {
             'use strict';
             document.body.addEventListener('click', copy, true);
+
             function copy(e) {
-                var t = e.target, c = t.dataset.copytarget, inp = (c ? document.querySelector(c) : null);
+                var t = e.target,
+                    c = t.dataset.copytarget,
+                    inp = (c ? document.querySelector(c) : null);
                 if (inp && inp.select) {
                     inp.select();
                     try {
                         document.execCommand('copy');
                         inp.blur();
                         t.classList.add('copied');
-                        setTimeout(function() {
-                           t.classList.remove('copied');
-                        }, 1500);
+                        setTimeout(function () {
+                            t.classList.remove('copied');
+                        }, 500);
                     } catch (err) {
                         alert('Нажмите Ctrl/Cmd+C для копирования текста в буфер обмена');
                     }
@@ -240,4 +243,5 @@
         })();
     </script>
 </body>
+
 </html>
