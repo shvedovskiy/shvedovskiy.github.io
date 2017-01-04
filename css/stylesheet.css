@@ -216,13 +216,13 @@ footer p {
 
 @media (max-width: 635px) and (min-width: 550px) {
     .my-photo {
-        content: url(http://placehold.it/130x130/);
+        content: url(../images/photo_130.png);
     }
 }
 
 @media (min-width: 900px) {
     .my-photo {
-        content: url(http://placehold.it/200x200/);
+        content: url(../images/photo_200.png);
     }
 }
 
