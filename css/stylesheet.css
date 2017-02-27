@@ -11,6 +11,13 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+input[disabled] {
+    cursor: pointer !important;
+    color: #222;
+    -webkit-text-fill-color: #222;
+    -webkit-opacity: 1;
+}
+
 header {
     padding-top: 25px;
     background-color: white;
@@ -56,7 +63,6 @@ header {
 .mail {
     padding: 4px 3px 3px 6px;
     border: dashed 1px #1EAEDB;
-    color: #222;
 }
 
 .mail:hover {
