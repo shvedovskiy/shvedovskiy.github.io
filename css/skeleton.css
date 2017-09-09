@@ -1,30 +1,3 @@
-/*
-* Skeleton V2.0.4
-* Copyright 2014, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 12/29/2014
-*/
-
-
-/* Table of contents
-––––––––––––––––––––––––––––––––––––––––––––––––––
-- Grid
-- Base Styles
-- Typography
-- Links
-- Buttons
-- Lists
-- Spacing
-- Utilities
-- Clearing
-*/
-
-
-/* Grid
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .container {
     position: relative;
     width: 100%;
@@ -41,18 +14,12 @@
     box-sizing: border-box;
 }
 
-
-/* For devices larger than 400px */
-
 @media (min-width: 400px) {
     .container {
         width: 85%;
         padding: 0;
     }
 }
-
-
-/* For devices larger than 550px */
 
 @media (min-width: 550px) {
     .container {
@@ -113,7 +80,6 @@
     .one-half.column {
         width: 48%;
     }
-    /* Offsets */
     .offset-by-one.column,
     .offset-by-one.columns {
         margin-left: 8.66666666667%;
@@ -172,36 +138,16 @@
     }
 }
 
-
-/* Base Styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-
-/* NOTE
-html is set to 62.5% so that all the REM measurements throughout Skeleton
-are based on 10px sizing. So basically 1.5rem = 15px :) */
-
 html {
     font-size: 62.5%;
 }
 
 body {
     font-size: 1.5em;
-    /* currently ems cause chrome bug misinterpreting rems on body element */
     line-height: 1.6;
     font-weight: 400;
-    /*    font-family: "Raleway",
-"HelveticaNeue",
-"Helvetica Neue",
-Helvetica,
-Arial,
-sans-serif;*/
     color: #222;
 }
-
-
-/* Typography
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 h1,
 h2,
@@ -251,8 +197,6 @@ h6 {
 }
 
 
-/* Larger than phablet */
-
 @media (min-width: 550px) {
     h1 {
         font-size: 5.0rem;
@@ -278,10 +222,6 @@ p {
     margin-top: 0;
 }
 
-
-/* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 a {
     color: #1EAEDB;
 }
@@ -290,14 +230,8 @@ a:hover {
     color: #0FA0CE;
 }
 
-
-/* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .button,
 button,
-input[type="submit"],
-input[type="reset"],
 input[type="button"] {
     display: inline-block;
     height: 38px;
@@ -320,13 +254,9 @@ input[type="button"] {
 
 .button:hover,
 button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
 input[type="button"]:hover,
 .button:focus,
 button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
 input[type="button"]:focus {
     color: #333;
     border-color: #888;
@@ -335,8 +265,6 @@ input[type="button"]:focus {
 
 .button.button-primary,
 button.button-primary,
-input[type="submit"].button-primary,
-input[type="reset"].button-primary,
 input[type="button"].button-primary {
     color: #FFF;
     background-color: #33C3F0;
@@ -345,37 +273,22 @@ input[type="button"].button-primary {
 
 .button.button-primary:hover,
 button.button-primary:hover,
-input[type="submit"].button-primary:hover,
-input[type="reset"].button-primary:hover,
 input[type="button"].button-primary:hover,
 .button.button-primary:focus,
 button.button-primary:focus,
-input[type="submit"].button-primary:focus,
-input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
     color: #FFF;
     background-color: #1EAEDB;
     border-color: #1EAEDB;
 }
 
-
-/* Lists
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 ul {
     list-style: circle inside;
-}
-
-ol,
-ul {
     padding-left: 0;
     margin-top: 0;
 }
 
-ul ul,
-ul ol,
-ol ol,
-ol ul {
+ul ul {
     margin: 1.5rem 0 1.5rem 3rem;
     font-size: 90%;
 }
@@ -384,37 +297,20 @@ li {
     margin-bottom: 1rem;
 }
 
-
-/* Spacing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 button,
 .button {
     margin-bottom: 1rem;
 }
 
 input,
-textarea,
-select,
-fieldset {
+textarea {
     margin-bottom: 1.5rem;
 }
 
-pre,
-blockquote,
-dl,
-figure,
-table,
 p,
-ul,
-ol,
-form {
+ul {
     margin-bottom: 2.5rem;
 }
-
-
-/* Utilities
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .u-full-width {
     width: 100%;
@@ -433,24 +329,6 @@ form {
 .u-pull-left {
     float: left;
 }
-
-
-/* Misc
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-hr {
-    margin-top: 3rem;
-    margin-bottom: 3.5rem;
-    border-width: 0;
-    border-top: 1px solid #E1E1E1;
-}
-
-
-/* Clearing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-
-/* Self Clearing Goodness */
 
 .container:after,
 .row:after,

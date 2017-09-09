@@ -1,14 +1,17 @@
 html,
 body {
     background-color: #444;
+    width: 100%;
     height: 100%;
     font-family: "ALS Story", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-* {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 input[disabled] {
@@ -44,7 +47,7 @@ header {
     margin-top: 25px;
 }
 
-#info-section {
+.info-section {
     background-color: white;
     padding: 10px 10px 20px 15px;
 }
@@ -136,60 +139,73 @@ header {
     }
 }
 
-#graduate-section ul {
+.section {
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+.graduate-section {
+    background-color: #fafafa;
+}
+
+.graduate-section ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-#graduate-section {
-    background-color: #fafafa;
-    padding-top: 25px;
-    padding-bottom: 20px;
-}
-
-.item-text {
+.graduate-section .item-text {
     padding-left: .75em;
 }
 
-
-/*
-#spbsu-item {
-    list-style-image: url(../images/_spbsu_logo.png);
+.computer-section {
+    background-color: #e8e8e8;
 }
-*/
 
-
-/*
-#polytech-item {
-    list-style-image: url(../images/_polytech_logo.png);
-}
-*/
-
-
-/*
-#technopolis-item {
-    list-style-image: url(../images/_technopolis_logo.png);
-}
-*/
-
-#computer-section .title {
+.computer-section .title {
     letter-spacing: normal;
 }
 
-#computer-section {
-    background-color: white;
-    padding-top: 25px;
-    padding-bottom: 20px;
+.computer-section .skill {
+    word-spacing: .2em;
 }
 
-#additions-section {
+.job-section {
     background-color: #f5f5f5;
-    padding-top: 25px;
-    padding-bottom: 20px;
 }
 
-#contacts-section {
+.job-section .job {
+    display: block;
+    margin-bottom: .4rem;
+    color: #353535;
+    font-weight: 300;
+}
+
+.job.name {
+    font-size: 1.4em;
+    color: #1EAEDB;
+}
+
+.job.title {
+    font-size: 1.2em;
+}
+
+.job.duration {
+    font-size: 1em;
+    color: #7f7786;
+    margin-bottom: 1.7rem;
+}
+
+.job-logo {
+    max-width: 50%;
+}
+
+
+.additions-section {
+    background-color: #eee;
+}
+
+.contacts-section {
     padding-top: 35px;
     padding-bottom: 25px;
     margin-bottom: 30px;
@@ -197,13 +213,10 @@ header {
     letter-spacing: 0.2em;
     text-align: center;
     background-color: white;
+    line-height: 1.3em;
 }
 
-.contacts-content {
-    line-height: 1em;
-}
-
-.tel {
+.contacts-section .tel {
     font-size: 1.8rem;
     letter-spacing: normal;
 }
@@ -214,6 +227,7 @@ footer {
 }
 
 footer p {
+    text-align: center;
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 0.77em;
     font-weight: 100;
@@ -221,9 +235,23 @@ footer p {
     color: #b2b2b2;
 }
 
+@media (max-width: 550px) {
+    .computer-section .title {
+        font-size: 2.4rem;
+        letter-spacing: .05em;
+    }
+    .job-logo {
+        margin: auto;
+        max-width: 30%;
+    }
+}
+
 @media (max-width: 635px) and (min-width: 550px) {
     .my-photo {
         content: url(../images/photo_130.png);
+    }
+    .job-logo {
+        max-width: 70%;
     }
 }
 
@@ -235,21 +263,30 @@ footer p {
 
 @font-face {
     font-family: 'ALS Story';
-    src: url('fonts/ALS Story Regular.eot') format('eot'), url('fonts/ALS Story Regular.woff') format('woff'), url('fonts/ALS Story Regular.ttf') format('truetype'), url('fonts/ALS Story Regular.svg') format('svg');
+    src: url('fonts/ALS Story Regular.eot?#iefix') format('embedded-opentype'), 
+         url('fonts/ALS Story Regular.woff') format('woff'), 
+         url('fonts/ALS Story Regular.ttf') format('truetype'), 
+         url('fonts/ALS Story Regular.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ALS Story';
-    src: url('fonts/ALS Story Bold.eot?') format('eot'), url('fonts/ALS Story Bold.woff') format('woff'), url('fonts/ALS Story Bold.ttf') format('truetype'), url('fonts/ALS Story Bold.svg') format('svg');
+    src: url('fonts/ALS Story Bold.eot?#iefix') format('embedded-opentype'), 
+         url('fonts/ALS Story Bold.woff') format('woff'), 
+         url('fonts/ALS Story Bold.ttf') format('truetype'), 
+         url('fonts/ALS Story Bold.svg') format('svg');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ALS Story';
-    src: url('fonts/ALS Story Bold Italic.eot?') format('eot'), url('fonts/ALS Story Bold Italic.woff') format('woff'), url('fonts/ALS Story Bold Italic.ttf') format('truetype'), url('fonts/ALS Story Bold Italic.svg') format('svg');
+    src: url('fonts/ALS Story Bold Italic.eot?#iefix') format('embedded-opentype'), 
+         url('fonts/ALS Story Bold Italic.woff') format('woff'), 
+         url('fonts/ALS Story Bold Italic.ttf') format('truetype'), 
+         url('fonts/ALS Story Bold Italic.svg') format('svg');
     font-weight: bold;
     font-style: italic;
 }
