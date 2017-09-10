@@ -47,6 +47,10 @@ header {
     margin-top: 25px;
 }
 
+.cv-button i {
+    font-size: 14px;
+}
+
 .info-section {
     background-color: white;
     padding: 10px 10px 20px 15px;
