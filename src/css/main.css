@@ -252,7 +252,7 @@ footer p {
 
 @media (max-width: 635px) and (min-width: 550px) {
     .my-photo {
-        content: url(../images/photo_130.png);
+        content: url(../assets/images/photo_130.png);
     }
     .job-logo {
         max-width: 70%;
@@ -261,36 +261,36 @@ footer p {
 
 @media (min-width: 900px) {
     .my-photo {
-        content: url(../images/photo_200.png);
+        content: url(../assets/images/photo_200.png);
     }
 }
 
 @font-face {
     font-family: 'ALS Story';
-    src: url('fonts/ALS Story Regular.eot?#iefix') format('embedded-opentype'), 
-         url('fonts/ALS Story Regular.woff') format('woff'), 
-         url('fonts/ALS Story Regular.ttf') format('truetype'), 
-         url('fonts/ALS Story Regular.svg') format('svg');
+    src: url('../assets/fonts/ALS/ALS Story Regular.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/ALS/ALS Story Regular.woff') format('woff'),
+         url('../assets/fonts/ALS/ALS Story Regular.ttf') format('truetype'),
+         url('../assets/fonts/ALS/ALS Story Regular.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ALS Story';
-    src: url('fonts/ALS Story Bold.eot?#iefix') format('embedded-opentype'), 
-         url('fonts/ALS Story Bold.woff') format('woff'), 
-         url('fonts/ALS Story Bold.ttf') format('truetype'), 
-         url('fonts/ALS Story Bold.svg') format('svg');
+    src: url('../assets/fonts/ALS/ALS Story Bold.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/ALS/ALS Story Bold.woff') format('woff'),
+         url('../assets/fonts/ALS/ALS Story Bold.ttf') format('truetype'),
+         url('../assets/fonts/ALS/ALS Story Bold.svg') format('svg');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ALS Story';
-    src: url('fonts/ALS Story Bold Italic.eot?#iefix') format('embedded-opentype'), 
-         url('fonts/ALS Story Bold Italic.woff') format('woff'), 
-         url('fonts/ALS Story Bold Italic.ttf') format('truetype'), 
-         url('fonts/ALS Story Bold Italic.svg') format('svg');
+    src: url('../assets/fonts/ALS/ALS Story Bold Italic.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/ALS/ALS Story Bold Italic.woff') format('woff'),
+         url('../assets/fonts/ALS/ALS Story Bold Italic.ttf') format('truetype'),
+         url('../assets/fonts/ALS/ALS Story Bold Italic.svg') format('svg');
     font-weight: bold;
     font-style: italic;
 }

@@ -1,0 +1,32 @@
+{
+  "name": "shvedovskiy.github.io",
+  "version": "0.0.1",
+  "description": "CV Online Page",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shvedovskiy/shvedovskiy.github.io.git"
+  },
+  "author": "Oleg Shvedov",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/shvedovskiy/shvedovskiy.github.io/issues"
+  },
+  "homepage": "https://github.com/shvedovskiy/shvedovskiy.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-load-plugins": "^1.5.0",
+    "run-sequence": "^2.2.0",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-uglify": "^3.0.0"
+  }
+}

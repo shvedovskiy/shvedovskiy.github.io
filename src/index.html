@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <title>Oleg Shvedov | Сurriculum vitæ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <script>
         (function (d, w, c) {
             (w[c] = w[c] || []).push(function () {
@@ -54,10 +52,10 @@
         <div class="row">
             <div class="offset-by-one column three columns photo">
                 <div class="row">
-                    <img class="my-photo" src="images/photo_150.png" alt="my_photo">
+                    <img class="my-photo" src="assets/images/photo_150.png" alt="my_photo">
                 </div>
                 <div class="row button-element">
-                    <a class="button button-primary cv-button" href="CV_Shvedov.pdf" target="_blank">
+                    <a class="button button-primary cv-button" href="assets/CV_Shvedov.pdf" target="_blank">
                         <i class="fa fa-cloud-download" aria-hidden="true"></i>&nbsp;&nbsp;Файл резюме
                     </a>
                 </div>
@@ -94,15 +92,15 @@
                 <div class="twelve columns">
                     <ul>
                         <li>
-                            <a href="http://spbu.ru/" target="_blank"><img src="images/spbsu-logo.png" alt="Saint Petersburg state university logo"></a>
+                            <a href="http://spbu.ru/" target="_blank"><img src="assets/images/spbsu-logo.png" alt="Saint Petersburg state university logo"></a>
                             <span class="item-text">В 2016 году закончил бакалавриат ПМ-ПУ СПбГУ по направлению «Фундаментальная информатика и ИТ»</span>
                         </li>
                         <li>
-                            <a href="http://spbstu.ru/" target="_blank"><img src="images/polytech-logo.png" alt="Saint Petersburg polytechnic university logo"></a>
+                            <a href="http://spbstu.ru/" target="_blank"><img src="assets/images/polytech-logo.png" alt="Saint Petersburg polytechnic university logo"></a>
                             <span class="item-text">С 2016 года обучаюсь в магистратуре СПбПУ им. Петра Великого на кафедре КИТ</span>
                         </li>
                         <li>
-                            <a href="http://polis.mail.ru/" target="_blank"><img src="images/technopolis-logo.png" alt="Technopolis logo"></a>
+                            <a href="http://polis.mail.ru/" target="_blank"><img src="assets/images/technopolis-logo.png" alt="Technopolis logo"></a>
                             <span class="item-text">Студент образовательного проекта «Технополис OK.RU», специальность «Java-разработчик высоконагруженных приложений», с 2016 года</span>
                         </li>
                     </ul>
@@ -163,7 +161,7 @@
                 </div>
                 <div class="three columns">
                     <a class="job name" target="_blank" href="https://fidals.com/">
-                        <img src="images/fidals.png" alt="Fidals company logo" class="job-logo">
+                        <img src="assets/images/fidals.png" alt="Fidals company logo" class="job-logo">
                     </a>
                 </div>
             </div>
@@ -241,30 +239,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        (function () {
-            'use strict';
-            document.body.addEventListener('click', copy, true);
-
-            function copy(e) {
-                var t = e.target,
-                    c = t.dataset.copytarget,
-                    inp = (c ? document.querySelector(c) : null);
-                if (inp && inp.select) {
-                    inp.select();
-                    try {
-                        document.execCommand('copy');
-                        inp.blur();
-                        t.classList.add('copied');
-                        setTimeout(function () {
-                            t.classList.remove('copied');
-                        }, 500);
-                    } catch (err) {
-                        alert('Нажмите Ctrl/Cmd+C для копирования текста в буфер обмена');
-                    }
-                }
-            }
-        })();
-    </script>
+    <script src="index.js" defer async></script>
 </body>
 </html>
