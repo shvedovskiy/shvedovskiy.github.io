@@ -4,7 +4,6 @@ const run = require('run-sequence');
 const g = require('gulp-load-plugins')({
   pattern: ['gulp-*']
 });
-const browserSync = require('browser-sync').create();
 
 const conf = {
   paths: {
@@ -44,6 +43,7 @@ gulp.task('css', () =>
     }))
     .pipe(g.concatCss('main.css'))
     .pipe(g.cleanCss({
+      compatibility: '*',
       rebase: false
     }))
     .pipe(gulp.dest(conf.paths.dist))
@@ -76,10 +76,6 @@ gulp.task('clean', cb =>
     conf.paths.dist
   ], { force: true }, cb)
 );
-
-gulp.task('reload', () => {
-  browserSync.reload();
-});
 
 gulp.task('watch', () => {
   gulp.watch(conf.paths.css, () => {

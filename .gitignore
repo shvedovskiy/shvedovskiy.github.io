@@ -52,3 +52,4 @@ $RECYCLE.BIN/
 node_modules/
 /.idea/shvedovskiy.github.io.iml
 /.idea/vcs.xml
+/dist/
