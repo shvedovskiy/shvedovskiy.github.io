@@ -225,6 +225,17 @@ header {
     letter-spacing: normal;
 }
 
+.icon {
+    width: 1.28571429em;
+    text-align: center;
+}
+
+.icon[class*=" icon-"]:before,
+.icon [class^=icon-]:before {
+    width: inherit;
+    margin: 0;
+}
+
 footer {
     background-color: #444;
     margin: -10px;
@@ -267,30 +278,36 @@ footer p {
 
 @font-face {
     font-family: 'ALS Story';
-    src: url('../assets/fonts/ALS/ALS Story Regular.eot?#iefix') format('embedded-opentype'),
-         url('../assets/fonts/ALS/ALS Story Regular.woff') format('woff'),
-         url('../assets/fonts/ALS/ALS Story Regular.ttf') format('truetype'),
-         url('../assets/fonts/ALS/ALS Story Regular.svg') format('svg');
     font-weight: normal;
     font-style: normal;
+    src: url('../assets/fonts/ALS/ALSStoryRegular.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/ALS/ALSStoryRegular.woff2') format('woff2'),
+         url('../assets/fonts/ALS/ALSStoryRegular.woff') format('woff'),
+         url('../assets/fonts/ALS/ALSStoryRegular.ttf') format('truetype'),
+         url('../assets/fonts/ALS/ALSStoryRegular.svg') format('svg');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'ALS Story';
-    src: url('../assets/fonts/ALS/ALS Story Bold.eot?#iefix') format('embedded-opentype'),
-         url('../assets/fonts/ALS/ALS Story Bold.woff') format('woff'),
-         url('../assets/fonts/ALS/ALS Story Bold.ttf') format('truetype'),
-         url('../assets/fonts/ALS/ALS Story Bold.svg') format('svg');
     font-weight: bold;
     font-style: normal;
+    src: url('../assets/fonts/ALS/ALSStoryBold.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/ALS/ALSStoryBold.woff2') format('woff2'),
+         url('../assets/fonts/ALS/ALSStoryBold.woff') format('woff'),
+         url('../assets/fonts/ALS/ALSStoryBold.ttf') format('truetype'),
+         url('../assets/fonts/ALS/ALSStoryBold.svg') format('svg');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'ALS Story';
-    src: url('../assets/fonts/ALS/ALS Story Bold Italic.eot?#iefix') format('embedded-opentype'),
-         url('../assets/fonts/ALS/ALS Story Bold Italic.woff') format('woff'),
-         url('../assets/fonts/ALS/ALS Story Bold Italic.ttf') format('truetype'),
-         url('../assets/fonts/ALS/ALS Story Bold Italic.svg') format('svg');
     font-weight: bold;
     font-style: italic;
+    src: url('../assets/fonts/ALS/ALSStoryBoldItalic.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/ALS/ALSStoryBoldItalic.woff2') format('woff2'),
+         url('../assets/fonts/ALS/ALSStoryBoldItalic.woff') format('woff'),
+         url('../assets/fonts/ALS/ALSStoryBoldItalic.ttf') format('truetype'),
+         url('../assets/fonts/ALS/ALSStoryBoldItalic.svg') format('svg');
+    font-display: swap;
 }
