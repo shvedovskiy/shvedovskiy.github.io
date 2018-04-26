@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "description": "CV Online Page",
   "main": "index.js",
+  "author": "Oleg Shvedov",
+  "license": "WTFPL",
   "scripts": {
     "build": "gulp build"
   },
@@ -10,8 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/shvedovskiy/shvedovskiy.github.io.git"
   },
-  "author": "Oleg Shvedov",
-  "license": "WTFPL",
   "bugs": {
     "url": "https://github.com/shvedovskiy/shvedovskiy.github.io/issues"
   },
