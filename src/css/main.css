@@ -262,19 +262,67 @@ footer p {
 }
 
 @media (max-width: 635px) and (min-width: 550px) {
-    .my-photo {
-        content: url(../assets/images/photo_130.png);
-    }
     .job-logo {
         max-width: 70%;
     }
+    .my-photo {
+        content: url(../assets/images/photo_130.png);
+        /*content: -webkit-image-set(*/
+            /*url(../assets/images/photo_130.png) 1x,*/
+            /*url(../assets/images/photo_260.png) 2x,*/
+            /*url(../assets/images/photo_520.png) 3x*/
+        /*);*/
+        /*content: image-set(*/
+            /*"../assets/images/photo_130.png" 1x,*/
+            /*"../assets/images/photo_260.png" 2x,*/
+            /*"../assets/images/photo_520.png" 3x*/
+        /*);*/
+    }
 }
+
+/*@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 635px) and (min-width: 550px),*/
+       /*only screen and (min-resolution: 192dpi) and (max-width: 635px) and (min-width: 550px) {*/
+    /*.my-photo {*/
+        /*content: url(../assets/images/photo_260.png);*/
+    /*}*/
+/*}*/
+
+/*@media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: 635px) and (min-width: 550px),*/
+       /*only screen and (min-resolution: 288dpi) and (max-width: 635px) and (min-width: 550px) {*/
+    /*.my-photo {*/
+        /*content: url(../assets/images/photo_520.png);*/
+    /*}*/
+/*}*/
 
 @media (min-width: 900px) {
     .my-photo {
         content: url(../assets/images/photo_200.png);
+        /*content: -webkit-image-set(*/
+            /*url(../assets/images/photo_200.png) 1x,*/
+            /*url(../assets/images/photo_400.png) 2x,*/
+            /*url(../assets/images/photo_800.png) 3x*/
+        /*);*/
+        /*content: image-set(*/
+            /*"../assets/images/photo_200.png" 1x,*/
+            /*"../assets/images/photo_400.png" 2x,*/
+            /*"../assets/images/photo_800.png" 3x*/
+        /*);*/
     }
 }
+
+/*@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 900px),*/
+       /*only screen and (min-resolution: 192dpi) and (min-width: 900px) {*/
+    /*.my-photo {*/
+        /*content: url(../assets/images/photo_400.png);*/
+    /*}*/
+/*}*/
+
+/*@media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 900px),*/
+       /*only screen and (min-resolution: 288dpi) and (min-width: 900px) {*/
+    /*.my-photo {*/
+        /*content: url(../assets/images/photo_800.png);*/
+    /*}*/
+/*}*/
 
 @font-face {
     font-family: 'ALS Story';
