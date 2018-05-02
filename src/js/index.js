@@ -1,20 +1,20 @@
 'use strict';
 
 (function () {
-  document.body.addEventListener('click', copy, true);
+  document.body.addEventListener('click', copyText, true);
 
-  function copy(e) {
-    var t = e.target,
-      c = t.dataset.copytarget,
-      inp = (c ? document.querySelector(c) : null);
-    if (inp && inp.select) {
-      inp.select();
+  function copyText(event) {
+    var targetElement = event.target;
+    var copyTarget = targetElement.dataset.copytarget;
+    var inputElement = (copyTarget ? document.querySelector(copyTarget) : null);
+    if (inputElement && inputElement.select) {
+      inputElement.select();
       try {
         document.execCommand('copy');
-        inp.blur();
-        t.classList.add('copied');
+        inputElement.blur();
+        targetElement.classList.add('copied');
         setTimeout(function () {
-          t.classList.remove('copied');
+          targetElement.classList.remove('copied');
         }, 500);
       } catch (err) {
         alert('Нажмите Ctrl/Cmd+C для копирования текста в буфер обмена');
