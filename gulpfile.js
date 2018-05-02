@@ -10,7 +10,9 @@ const conf = {
     src: 'src',
     dist: 'dist',
     css: [
-      'src/css/*.css',
+      'src/css/normalize.css',
+      'src/css/fonts.css',
+      'src/css/main.css',
       '!node_modules/**/*.css'
     ],
     html: [
@@ -37,6 +39,7 @@ const conf = {
 
 gulp.task('css', () =>
   gulp.src(conf.paths.css)
+    .pipe(g.importCss())
     .pipe(g.autoprefixer({
       browsers: conf.browsers,
       cascade: false

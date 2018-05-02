@@ -1,0 +1,16 @@
+@keyframes showcopied {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    15% {
+        opacity: .8;
+    }
+    70% {
+        opacity: .6;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+}

@@ -53,3 +53,5 @@ node_modules/
 /.idea/shvedovskiy.github.io.iml
 /.idea/vcs.xml
 /dist/
+/.idea/misc.xml
+/.idea/modules.xml

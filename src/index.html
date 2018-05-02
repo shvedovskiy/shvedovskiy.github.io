@@ -42,98 +42,99 @@
     </noscript>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="twelve columns">
-                    <h3 class="main-title">Меня зовут Олег Шведов</h3>
-                </div>
+    <div class="page-container">
+        <header class="section">
+            <div class="section-container">
+                <h1 class="main-title">Меня зовут Олег Шведов</h1>
             </div>
-        </div>
-    </header>
-    <section class="info-section">
-        <div class="row">
-            <div class="offset-by-one column three columns photo">
-                <div class="row">
-                    <img class="my-photo" src="assets/images/photo_150.png" alt="my_photo">
-                    <!--<picture>-->
-                        <!--&lt;!&ndash;<source&ndash;&gt;-->
-                            <!--&lt;!&ndash;media="(min-width: 550px) and (max-width: 635px)"&ndash;&gt;-->
-                            <!--&lt;!&ndash;srcset="assets/images/photo_130.png 130w&ndash;&gt;-->
-                                    <!--&lt;!&ndash;assets/images/proto&ndash;&gt;-->
-                                    <!--&lt;!&ndash;"&ndash;&gt;-->
-                            <!--&lt;!&ndash;sizes=""&ndash;&gt;-->
-                            <!--&lt;!&ndash;type="image/webp">&ndash;&gt;-->
-                        <!--<img-->
-                            <!--alt="My photo"-->
-                            <!--class="my-photo"-->
-                            <!--src="assets/images/photo_150.png"-->
-                            <!--width="150"-->
-                            <!--srcset="assets/images/photo_300.png 2x,-->
-                                    <!--assets/images/photo_600.png 3x"-->
-                            <!--sizes="">-->
-                    <!--</picture>-->
+        </header>
 
+        <section class="personal-info section">
+            <div class="section-container">
+                <div class="photo">
+                    <picture>
+                        <source
+                                srcset="assets/images/photo_150.webp 150w,
+                                        assets/images/photo_200.webp 200w,
+                                        assets/images/photo_250.webp 250w,
+                                        assets/images/photo_150@2x.webp 300w,
+                                        assets/images/photo_200@2x.webp 400w,
+                                        assets/images/photo_150@3x.webp 450w,
+                                        assets/images/photo_250@2x.webp 500w,
+                                        assets/images/photo_200@3x.webp 600w,
+                                        assets/images/photo_250@3x.webp 750w"
+                                sizes="(min-width: 660px) 200px,
+                                       (min-width: 550px) 150px,
+                                       250px"
+                                type="image/webp">
+                        <img
+                                alt="My photo"
+                                src="assets/images/photo_150.png"
+                                srcset="assets/images/photo_150.png 150w,
+                                        assets/images/photo_200.png 200w,
+                                        assets/images/photo_250.png 250w,
+                                        assets/images/photo_150@2x.png 300w,
+                                        assets/images/photo_200@2x.png 400w,
+                                        assets/images/photo_150@3x.png 450w,
+                                        assets/images/photo_250@2x.png 500w,
+                                        assets/images/photo_200@3x.png 600w,
+                                        assets/images/photo_250@3x.png 750w"
+                                sizes="(min-width: 660px) 200px,
+                                       (min-width: 550px) 150px,
+                                       250px">
+                    </picture>
                 </div>
-                <div class="row button-element">
-                    <a class="button button-primary cv-button" href="assets/CV_Shvedov.pdf" target="_blank">
+                <div class="button-element">
+                    <a class="cv-button" href="assets/CV_Shvedov.pdf" target="_blank">
                         <i class="icon icon-download-cloud" aria-hidden="true"></i>&nbsp;&nbsp;Файл резюме
                     </a>
                 </div>
-            </div>
-            <div class="seven columns">
-                <ul class="nobullets">
-                    <li>
-                        22 года, живу в Санкт&#x2010;Петербурге
-                    </li>
-                    <li>Программист, прикладной математик</li>
-                    <li>Интересуюсь разработкой веб&#x2010;сервисов, фронтэндом и бекэндом, алгоритмами</li>
-                    <li>Опыт работы:
-                        <ul>
-                            <li>Junior Python&#x2010;разработчик (апрель &mdash; август 2017 года)</li>
-                        </ul>
-                    </li>
-                    <li><a href="https://github.com/shvedovskiy/" title="Oleg&#39;s projects" target="_blank">github.com/shvedovskiy</a></li>
-                    <li>
-                        <input type="text" id="mail" class="mail" value="ol.shvedov@gmail.com" disabled>
-                        <span class="copy" data-copytarget="#mail">Копировать</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="section graduate-section">
-        <div class="container">
-            <div class="row">
-                <div class="twelve columns">
-                    <h4 class="title">Образование:</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="twelve columns">
-                    <ul>
+                <div class="description">
+                    <ul class="nobullets">
                         <li>
-                            <a href="http://spbu.ru/" target="_blank"><img src="assets/images/spbsu-logo.png" alt="Saint Petersburg state university logo"></a>
-                            <span class="item-text">В 2016 году закончил бакалавриат ПМ&#x2010;ПУ СПбГУ по направлению &laquo;Фундаментальная информатика и ИТ&raquo;</span>
+                            22 года, живу в Санкт&#x2010;Петербурге
                         </li>
-                        <li>
-                            <a href="http://spbstu.ru/" target="_blank"><img src="assets/images/polytech-logo.png" alt="Saint Petersburg polytechnic university logo"></a>
-                            <span class="item-text">С 2016 года обучаюсь в магистратуре СПбПУ им. Петра Великого на кафедре КИТ</span>
+                        <li>Программист, прикладной математик</li>
+                        <li>Интересуюсь разработкой веб&#x2010;сервисов, фронтэндом и бекэндом, алгоритмами</li>
+                        <li>Опыт работы:
+                            <ul>
+                                <li>Junior Python&#x2010;разработчик (апрель &mdash; август 2017 года)</li>
+                            </ul>
                         </li>
+                        <li><a href="https://github.com/shvedovskiy/" title="Oleg&#39;s projects">github.com/shvedovskiy</a></li>
                         <li>
-                            <a href="http://polis.mail.ru/" target="_blank"><img src="assets/images/technopolis-logo.png" alt="Technopolis logo"></a>
-                            <span class="item-text">Студент образовательного проекта &laquo;Технополис OK.RU&raquo;, специальность &laquo;Java&#x2010;разработчик высоконагруженных приложений&raquo;, с 2016 года</span>
+                            <input type="text" id="mail" class="mail" value="ol.shvedov@gmail.com" disabled>
+                            <span class="copy-mail" data-copytarget="#mail">Копировать</span>
                         </li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="section computer-section">
-        <div class="container">
-            <div class="row">
-                <div class="five columns">
-                    <h5 class="title">Языки програм<wbr>миро<wbr>вания:</h5>
+        </section>
+
+        <section class="education section">
+            <div class="section-container">
+                <h4 class="title">Образование:</h4>
+                <ul class="education-list nobullets">
+                    <li class="education-item">
+                        <a href="http://spbu.ru/" target="_blank"><img src="assets/images/spbsu-logo.png" alt="Saint Petersburg state university logo" class="education-logo"></a>
+                        <span class="education-item-text">В 2016 году закончил бакалавриат ПМ&#x2010;ПУ СПбГУ по направлению &laquo;Фундаментальная информатика и ИТ&raquo;</span>
+                    </li>
+                    <li class="education-item">
+                        <a href="http://spbstu.ru/" target="_blank"><img src="assets/images/polytech-logo.png" alt="Saint Petersburg polytechnic university logo"></a>
+                        <span class="education-item-text">С 2016 года обучаюсь в магистратуре СПбПУ им. Петра Великого на кафедре КИТ</span>
+                    </li>
+                    <li class="education-item">
+                        <a href="http://polis.mail.ru/" target="_blank"><img src="assets/images/technopolis-logo.png" alt="Technopolis logo"></a>
+                        <span class="education-item-text">Студент образовательного проекта &laquo;Технополис OK.RU&raquo;, специальность &laquo;Java&#x2010;разработчик высоконагруженных приложений&raquo;, с 2016 года</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="skills section">
+            <div class="section-container">
+                <div class="languages">
+                    <h5 class="sub-title">Языки програм<wbr>миро<wbr>вания:</h5>
                     <ul>
                         <li>Python версий 2 и 3</li>
                         <li>JavaScript (в том числе ES2015)</li>
@@ -141,8 +142,8 @@
                         <li>Имею начальный опыт в C, C++11</li>
                     </ul>
                 </div>
-                <div class="seven columns">
-                    <h5 class="title">Работаю со следующими технологиями:</h5>
+                <div class="technologies">
+                    <h5 class="sub-title">Работаю со следующими технологиями:</h5>
                     <ul>
                         <li>
                             <strong>Веб&#x2010;программирование (frontend):</strong> <span class="skill">HTML5, CSS3, React, SASS/LESS, jQuery, Gulp.js, webpack, Bootstrap, BEM. Знаком с Vue.js</span>
@@ -159,61 +160,46 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="section job-section">
-        <div class="container">
-            <div class="row">
-                <div class="twelve columns">
-                    <h4 class="title">Опыт работы:</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="nine columns">
-                    <a class="job name" target="_blank" href="https://fidals.com/">
-                        Fidals
-                    </a>
-                    <p class="job title">
-                        Junior Python&#x2010;разработчик
-                    </p>
-                    <p class="job duration">
-                        апрель &mdash; август 2017 года
-                    </p>
-                </div>
-                <div class="three columns">
-                    <a class="job name" target="_blank" href="https://fidals.com/">
-                        <img src="assets/images/fidals.png" alt="Fidals company logo" class="job-logo">
+        </section>
+
+        <section class="job section">
+            <div class="section-container">
+                <h4 class="title">Опыт работы:</h4>
+                <div class="job-details">
+                    <a class="job-name" target="_blank" href="https://fidals.com">Fidals</a>
+                    <p class="job-position">Junior Python&#x2010;разработчик</p>
+                    <p class="job-duration">апрель &mdash; август 2017 года</p>
+                    <a class="job-logo" target="_blank" href="https://fidals.com/">
+                        <picture>
+                            <source
+                                    srcset="assets/images/fidals.webp 1x,
+                                            assets/images/fidals@2x.webp 2x"
+                                    type="image/webp">
+                            <img
+                                    src="assets/images/fidals.png"
+                                    alt="Fidals logo"
+                                    class="job-logo-image"
+                                    srcset="assets/images/fidals.png 1x,
+                                            assets/images/fidals@2x.png 2x">
+                        </picture>
                     </a>
                 </div>
+                <h5 class="sub-title">Обязанности в проектах:</h5>
+                <ul>
+                    <li>Участие в разработке нескольких Django и Flask&#x2010;проектов: рефакторинг и оптимизация кода, устранение большого количества багов, реализация новых функций</li>
+                    <li>Интеграция e&#x2010;commerce проектов с Яндекс.Маркетом, внедрение CRM</li>
+                    <li>Разработка мобильного API для сервиса потокового видеовещания</li>
+                    <li>Познакомился с контейнеризацией сложных проектов в Docker и их развертыванием на серверах</li>
+                    <li>Работа с версткой: улучшение и исправление, написание новой с использованием ES6 + SASS/LESS, покрытие тестами</li>
+                    <li>Непрерывное взаимодействие с командой и улучшение скиллов: углубил знания в Django и PostgreSQL, изучил Celery, Selenium и Redis</li>
+                </ul>
             </div>
-            <div class="row">
-                <div class="twelve columns">
-                    <h5 class="title">Обязанности в проектах:</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="twelve columns">
-                    <ul>
-                        <li>Участие в разработке нескольких Django и Flask&#x2010;проектов: рефакторинг и оптимизация кода, устранение большого количества багов, реализация новых функций</li>
-                        <li>Интеграция e&#x2010;commerce проектов с Яндекс.Маркетом, внедрение CRM</li>
-                        <li>Разработка мобильного API для сервиса потокового видеовещания</li>
-                        <li>Познакомился с контейнеризацией сложных проектов в Docker и их развертыванием на серверах</li>
-                        <li>Работа с версткой: улучшение и исправление, написание новой с использованием ES6 + SASS/LESS, покрытие тестами</li>
-                        <li>Непрерывное взаимодействие с командой и улучшение скиллов: углубил знания в Django и PostgreSQL, изучил Celery, Selenium и Redis</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section additions-section">
-        <div class="container">
-            <div class="row">
-                <div class="eleven columns offset-by-one column">
+        </section>
+
+        <section class="additions section">
+            <div class="section-container">
+                <div class="shifted">
                     <h4 class="title">Общая информация:</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="eleven columns offset-by-one column">
                     <ul>
                         <li>
                             <strong>Дополнительное образование:</strong> сертификат курса «Введение в Java» OK.RU 2016 г., сертификаты Cousera, курсы Udacity
@@ -228,49 +214,42 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="section contacts-section">
-        <div class="container">
-            <div class="row">
-                <div class="twelve columns">
-                    <h4 class="title">Способы связи со мной:</h4>
+        </section>
+
+        <section class="contact section">
+            <div class="section-container">
+                <h4 class="title">Способы связи со мной:</h4>
+                <div class="links">
+                    <a href="mailto:ol.shvedov@gmail.com" title="Write an email" class="icon-container">
+                        <i class="icon icon-mail" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="https://vk.com/shvedovskiy" title="Chat with Oleg" class="icon-container">
+                        <i class="icon icon-vkontakte" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="https://telegram.me/shvedovskiy" title="Chat with Oleg" class="icon-container">
+                        <i class="icon icon-telegram" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="https://github.com/shvedovskiy" title="Oleg&#39;s projects" class="icon-container">
+                        <i class="icon icon-github-circled" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/oleg-shvedov" title="Oleg&#39;s LinkedIn" class="icon-container">
+                        <i class="icon icon-linkedin-squared" aria-hidden="true"></i>
+                    </a>
+                    <a href="skype:shvedovkiy?chat" title="Chat with Oleg" class="icon-container">
+                        <i class="icon icon-skype" aria-hidden="true"></i>
+                    </a>
                 </div>
-            </div>
-            <div class="row links">
-                <div class="twelve columns">
-                    <span class="contacts-content">
-                        <a href="mailto:ol.shvedov@gmail.com" title="Write an email">
-                            <i class="icon icon-mail" aria-hidden="true"></i>
-                        </a>
-                        <a target="_blank" href="https://vk.com/shvedovskiy" title="Chat with Oleg">
-                            <i class="icon icon-vkontakte" aria-hidden="true"></i>
-                        </a>
-                        <a target="_blank" href="https://telegram.me/shvedovskiy" title="Chat with Oleg">
-                            <i class="icon icon-telegram" aria-hidden="true"></i>
-                        </a>
-                        <a target="_blank" href="https://github.com/shvedovskiy" title="Oleg&#39;s projects">
-                            <i class="icon icon-github-circled" aria-hidden="true"></i>
-                        </a>
-                        <a target="_blank" href="https://www.linkedin.com/in/oleg-shvedov" title="Oleg&#39;s LinkedIn">
-                            <i class="icon icon-linkedin-squared" aria-hidden="true"></i>
-                        </a>
-                        <a href="skype:shvedovkiy?chat" title="Chat with Oleg">
-                            <i class="icon icon-skype" aria-hidden="true"></i>
-                        </a>
-                        <br>
-                        <span class="tel">Созвониться: <a href="tel:+79095788649" title="Call to me">+7 (909) 578&#x2012;86&#x2012;49</a></span>
+                <span class="tel">
+                        Созвониться: <a href="tel:+79095788649" title="Call">+7 (909) 578&#x2012;86&#x2012;49</a>
                     </span>
-                </div>
             </div>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <p>Designed by <a href="mailto:ol.shvedov@gmail.com" title="Write an email">Oleg Shvedov</a>, 2017</p>
+        </section>
+
+        <footer>
+            <div class="section-container">
+                <p>Designed by <a href="mailto:ol.shvedov@gmail.com" title="Write an email">Oleg Shvedov</a>, 2018</p>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 </html>
