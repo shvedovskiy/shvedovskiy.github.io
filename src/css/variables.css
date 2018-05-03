@@ -1,6 +1,7 @@
 :root {
     --html-bgc: #444;
     --body-bgc: #fff;
+    --header-bgc: #fff;
     --personal-info-bgc: #fff;
     --education-bgc: #fafafa;
     --skills-bgc: #e8e8e8;
@@ -38,7 +39,11 @@
     --200-px: 12.5rem;
     --500-px: 31.25rem;
 
-    --min-layout-width: 18.75rem;
+    --big-header-fsz:  1.875rem;
+    --middle-header-fsz: 1.5rem;
+    --small-header-fsz: 1.125rem;
+
+    --min-layout-width: 19.375rem;
     --max-layout-width: 60rem;
     --max-photo-width: 15.625rem;
 }
