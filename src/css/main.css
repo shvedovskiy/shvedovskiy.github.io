@@ -197,6 +197,7 @@ header {
     margin-bottom: var(--10-px);
     padding: var(--4-px) 0 var(--3-px) 0;
     border: dashed 1px var(--light-blue-font);
+    border-radius: 1px;
     text-align: center;
 }
 
