@@ -3,7 +3,6 @@
 *    education logos retina (unify size)
 *    reduce style rules (check all)
 */
-
 @import url('variables.css');
 @import url('keyframes.css');
 
@@ -66,6 +65,10 @@ input[disabled] {
     color: var(--low-gray-font);
     -webkit-text-fill-color: var(--low-gray-font);
     -webkit-opacity: 1;
+}
+
+input[type=text] {
+    -webkit-appearance: none;
 }
 
 .page-container {
@@ -189,22 +192,19 @@ header {
     grid-area: description;
 }
 
-.personal-info .mail,
-.personal-info .copy-mail {
-    float: left;
-    cursor: pointer;
-}
-
 .personal-info .mail {
+    display: inline-block;
     margin-bottom: var(--10-px);
-    padding: var(--4-px) 0 var(--3-px) var(--6-px);
+    padding: var(--4-px) 0 var(--3-px) 0;
     border: dashed 1px var(--light-blue-font);
+    text-align: center;
 }
 
 .personal-info .copy-mail {
     display: none;
     position: relative;
-    padding: var(--3-px);
+    margin-left: -4px;
+    padding: var(--2-px) var(--6-px);
     font-size: .9em;
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: var(--light-blue-font);
@@ -216,13 +216,17 @@ header {
 
 .mail:hover + .copy-mail,
 .copy-mail:hover {
-    display: block;
+    display: inline-block;
+}
+
+.copy-mail:hover {
+    cursor: pointer;
 }
 
 .copied::after {
     position: absolute;
     top: -80%;
-    right: -7%;
+    right: -3%;
     display: block;
     content: "Скопировано";
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
