@@ -250,6 +250,8 @@ header {
 
 .education-list .education-logo {
     flex-grow: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .education-list .education-item-text {
@@ -365,19 +367,20 @@ header {
     flex-shrink: 0;
 }
 
+.contact .icon {
+    width: 1.11111111em;
+    text-align: center;
+}
+
 .contact .tel {
     font-size: var(--18-px);
     line-height: initial;
     letter-spacing: normal;
 }
 
-.contact .icon {
-    width: 1.11111111em;
-    text-align: center;
-}
-
 .contact .icon[class*=" icon-"]::before,
 .contact .icon [class^=icon-]::before {
+    width: auto;
     margin: 0;
 }
 
