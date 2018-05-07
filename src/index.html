@@ -3,40 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Oleg Shvedov | Сurriculum vitæ</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="assets/fonts/icon/icon.min.css">
 
     <script src="index.js" defer></script>
-    <script>
-        (function (d, w, c) {
-            (w[c] = w[c] || []).push(function () {
-                try {
-                    w.yaCounter41358709 = new Ya.Metrika({
-                        id: 41358709,
-                        clickmap: true,
-                        trackLinks: true,
-                        accurateTrackBounce: true,
-                        webvisor: true
-                    });
-                } catch (e) {}
-            });
-            var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function () {
-                    n.parentNode.insertBefore(s, n);
-                };
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = "https://mc.yandex.ru/metrika/watch.js";
-            if (w.opera == "[object Opera]") {
-                d.addEventListener("DOMContentLoaded", f, false);
-            } else {
-                f();
-            }
-        })(document, window, "yandex_metrika_callbacks");
-    </script>
     <noscript>
         <div><img src="https://mc.yandex.ru/watch/41358709" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
@@ -101,7 +73,7 @@
                         </li>
                         <li><a href="https://github.com/shvedovskiy/" title="Oleg&#39;s projects">github.com/shvedovskiy</a></li>
                         <li>
-                            <input type="text" id="mail" class="mail" value="ol.shvedov@gmail.com" disabled>
+                            <input type="text" id="mail" class="mail" value="ol.shvedov@gmail.com" disabled aria-label="E-mail">
                             <span class="copy-mail" data-copytarget="#mail">Копировать</span>
                         </li>
                     </ul>
@@ -114,7 +86,7 @@
                 <h4 class="title">Образование:</h4>
                 <ul class="education-list nobullets">
                     <li class="education-item">
-                        <a href="http://spbu.ru/" target="_blank">
+                        <a href="http://spbu.ru/" target="_blank" rel="noopener">
                             <picture>
                                 <source srcset="assets/images/spbu.webp 1x,
                                                 assets/images/spbu@2x.webp 2x,
@@ -131,7 +103,7 @@
                         <span class="education-item-text">В 2016 году закончил бакалавриат ПМ&#x2010;ПУ СПбГУ по направлению &laquo;Фундаментальная информатика и ИТ&raquo;</span>
                     </li>
                     <li class="education-item">
-                        <a href="http://spbstu.ru/" target="_blank">
+                        <a href="http://spbstu.ru/" target="_blank" rel="noopener">
                             <picture>
                                 <source srcset="assets/images/polytech.webp 1x,
                                                 assets/images/polytech@2x.webp 2x,
@@ -148,7 +120,7 @@
                         <span class="education-item-text">С 2016 года обучаюсь в магистратуре СПбПУ им. Петра Великого на кафедре КИТ</span>
                     </li>
                     <li class="education-item">
-                        <a href="http://polis.mail.ru/" target="_blank">
+                        <a href="http://polis.mail.ru/" target="_blank" rel="noopener">
                             <picture>
                                 <source srcset="assets/images/technopolis.webp 1x,
                                                 assets/images/technopolis@2x.webp 2x,
@@ -261,22 +233,22 @@
                         </a>
                     </span>
                     <span class="link">
-                        <a target="_blank" href="https://vk.com/shvedovskiy" title="Chat with Oleg">
+                        <a target="_blank" href="https://vk.com/shvedovskiy" rel="noopener" title="Chat with Oleg">
                             <i class="icon icon-vkontakte" aria-hidden="true"></i>
                         </a>
                     </span>
                     <span class="link">
-                        <a target="_blank" href="https://telegram.me/shvedovskiy" title="Chat with Oleg">
+                        <a target="_blank" href="https://telegram.me/shvedovskiy" rel="noopener" title="Chat with Oleg">
                             <i class="icon icon-telegram" aria-hidden="true"></i>
                         </a>
                     </span>
                     <span class="link">
-                        <a target="_blank" href="https://github.com/shvedovskiy" title="Oleg&#39;s projects">
+                        <a target="_blank" href="https://github.com/shvedovskiy" rel="noopener" title="Oleg&#39;s projects">
                             <i class="icon icon-github-circled" aria-hidden="true"></i>
                         </a>
                     </span>
                     <span class="link">
-                        <a target="_blank" href="https://www.linkedin.com/in/oleg-shvedov" title="Oleg&#39;s LinkedIn">
+                        <a target="_blank" href="https://www.linkedin.com/in/oleg-shvedov" rel="noopener" title="Oleg&#39;s LinkedIn">
                             <i class="icon icon-linkedin-squared" aria-hidden="true"></i>
                         </a>
                     </span>
@@ -298,5 +270,34 @@
             </div>
         </footer>
     </div>
+
+    <script>
+      (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+          try {
+            w.yaCounter41358709 = new Ya.Metrika({
+              id: 41358709,
+              clickmap: true,
+              trackLinks: true,
+              accurateTrackBounce: true,
+              webvisor: true
+            });
+          } catch (e) {}
+        });
+        var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () {
+            n.parentNode.insertBefore(s, n);
+          };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+        if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+          f();
+        }
+      })(document, window, "yandex_metrika_callbacks");
+    </script>
 </body>
 </html>
