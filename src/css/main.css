@@ -56,6 +56,10 @@ li {
     margin-bottom: var(--10-px);
 }
 
+li:last-child {
+    margin-bottom: 0;
+}
+
 p {
     margin: 0;
 }
@@ -63,6 +67,7 @@ p {
 input[disabled] {
     cursor: pointer !important;
     color: var(--low-gray-font);
+    background-color: transparent;
     -webkit-text-fill-color: var(--low-gray-font);
     -webkit-opacity: 1;
 }
@@ -104,7 +109,7 @@ input[type=text] {
     margin: 0 0 .66666667em;
     color: var(--gray-font);
     font-weight: 500;
-    letter-spacing: .05em;
+    letter-spacing: .04em;
 }
 
 .main-title {
@@ -244,6 +249,10 @@ header {
     background-color: var(--education-bgc);
 }
 
+.education .section-container {
+    margin-bottom: var(--10-px);
+}
+
 .education .education-item {
     display: flex;
     align-items: center;
@@ -274,7 +283,6 @@ header {
 .skills .sub-title {
     margin-bottom: .83333333em;
     font-size: var(--24-px);
-    letter-spacing: .05em;
 }
 
 .skills .languages {
@@ -293,6 +301,10 @@ header {
 .job {
     grid-area: job;
     background-color: var(--job-bgc);
+}
+
+.job .section-container {
+    margin-bottom: var(--10-px);
 }
 
 .job .sub-title {
@@ -342,6 +354,10 @@ header {
 .additions {
     grid-area: additions;
     background-color: var(--additions-bgc);
+}
+
+.additions .section-container {
+    margin-bottom: var(--10-px);
 }
 
 .contact {
