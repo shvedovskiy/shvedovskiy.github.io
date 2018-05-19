@@ -2,34 +2,29 @@
     font-family: "ALS Story";
     font-weight: normal;
     font-style: normal;
-    src: url("assets/fonts/ALS/ALSStoryRegular.eot?#iefix") format("embedded-opentype"),
-    url("assets/fonts/ALS/ALSStoryRegular.woff2") format("woff2"),
+    src: url("assets/fonts/ALS/ALSStoryRegular.woff2") format("woff2"),
     url("assets/fonts/ALS/ALSStoryRegular.woff") format("woff"),
-    url("assets/fonts/ALS/ALSStoryRegular.ttf") format("truetype"),
-    url("assets/fonts/ALS/ALSStoryRegular.svg") format("svg");
+    url("assets/fonts/ALS/ALSStoryRegular.ttf") format("truetype");
     font-display: swap;
 }
 
-@font-face {
-    font-family: "ALS Story";
-    font-weight: bold;
-    font-style: normal;
-    src: url("assets/fonts/ALS/ALSStoryBold.eot?#iefix") format("embedded-opentype"),
-    url("assets/fonts/ALS/ALSStoryBold.woff2") format("woff2"),
-    url("assets/fonts/ALS/ALSStoryBold.woff") format("woff"),
-    url("assets/fonts/ALS/ALSStoryBold.ttf") format("truetype"),
-    url("assets/fonts/ALS/ALSStoryBold.svg") format("svg");
-    font-display: swap;
-}
+/* TODO: disabled for future use */
+/*@font-face {*/
+    /*font-family: "ALS Story";*/
+    /*font-weight: bold;*/
+    /*font-style: normal;*/
+    /*src: url("assets/fonts/ALS/ALSStoryBold.woff2") format("woff2"),*/
+    /*url("assets/fonts/ALS/ALSStoryBold.woff") format("woff"),*/
+    /*url("assets/fonts/ALS/ALSStoryBold.ttf") format("truetype");*/
+    /*font-display: swap;*/
+/*}*/
 
-@font-face {
-    font-family: "ALS Story";
-    font-weight: bold;
-    font-style: italic;
-    src: url("assets/fonts/ALS/ALSStoryBoldItalic.eot?#iefix") format("embedded-opentype"),
-    url("assets/fonts/ALS/ALSStoryBoldItalic.woff2") format("woff2"),
-    url("assets/fonts/ALS/ALSStoryBoldItalic.woff") format("woff"),
-    url("assets/fonts/ALS/ALSStoryBoldItalic.ttf") format("truetype"),
-    url("assets/fonts/ALS/ALSStoryBoldItalic.svg") format("svg");
-    font-display: swap;
-}
+/*@font-face {*/
+    /*font-family: "ALS Story";*/
+    /*font-weight: bold;*/
+    /*font-style: italic;*/
+    /*src: url("assets/fonts/ALS/ALSStoryBoldItalic.woff2") format("woff2"),*/
+    /*url("assets/fonts/ALS/ALSStoryBoldItalic.woff") format("woff"),*/
+    /*url("assets/fonts/ALS/ALSStoryBoldItalic.ttf") format("truetype");*/
+    /*font-display: swap;*/
+/*}*/
