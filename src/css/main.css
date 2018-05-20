@@ -178,7 +178,7 @@ header {
     font-size: var(--12-px);
     font-weight: 600;
     line-height: var(--36-px);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
