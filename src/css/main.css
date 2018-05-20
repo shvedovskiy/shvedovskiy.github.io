@@ -175,11 +175,12 @@ header {
     border: 1px solid var(--bright-blue-font);
     border-radius: 4px;
     color: var(--white-font);
-    font-size: var(--11-px);
+    font-size: var(--12-px);
     font-weight: 600;
     line-height: var(--36-px);
-    letter-spacing: 0.14545455em;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
+    text-align: center;
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
@@ -190,8 +191,18 @@ header {
     border-color: var(--light-blue-font);
 }
 
+.personal-info .cv-button:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+
 .personal-info .cv-button i {
-    font-size: var(--15-px);
+    vertical-align: middle;
+    font-size: var(--17-px);
+}
+
+.personal-info .cv-button i::before {
+    line-height: 0;
 }
 
 .personal-info .description {
