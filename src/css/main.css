@@ -124,7 +124,6 @@ input[type=text] {
 
 .sub-title {
     font-size: var(--small-header-fsz);
-    line-height: 1.5;
 }
 
 .nobullets {
@@ -297,6 +296,9 @@ header {
 }
 
 .skills .languages {
+    word-break: break-all;
+    overflow-wrap: break-word;
+    hyphens: auto;
     flex-basis: 100%;
     margin-bottom: var(--25-px);
 }
@@ -470,6 +472,7 @@ footer {
 
     .skills .sub-title {
         letter-spacing: normal;
+        line-height: 1.5;
     }
 
     .skills .languages {
