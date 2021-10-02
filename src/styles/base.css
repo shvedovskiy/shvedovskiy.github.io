@@ -1,0 +1,167 @@
+:root {
+  --link-border-size: 0.3125em;
+  --fsz-base: 1rem;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --bg: #2f3437;
+    --text: #cdd9e5;
+    --link: #519bf5;
+    --link-visited: #914dff;
+  }
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-button {
+  width: 13px;
+  height: 13px;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track-piece:hover:active {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVQYV2P8/////4MHDzIwHjhw4L+9vT0DAHAFCj6esq3FAAAAAElFTkSuQmCC") repeat;
+  image-rendering: pixelated;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner {
+  background-color: #c0c0c0;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-button {
+  border: 1px solid;
+  border-top-color: #c0c0c0;
+  border-left-color: #c0c0c0;
+  border-right-color: #000;
+  border-bottom-color: #000;
+  box-shadow: 1px 1px 0 #fff inset, -1px -1px 0 #808080 inset;
+}
+
+::-webkit-scrollbar-button {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAJCAYAAABaMo5wAAAAW0lEQVQ4T2NkGGSAcZC5h4FWDvrPwEC02ShqkR0EkkAHuBxMyEKYWYQ8jKEOXQOyo/A5BuZwqqvBZiA+3xMbilQLIWqlcUJRimwPzjRELcdQZA6hREeR4eRoBgBoXhAK6oiMhwAAAABJRU5ErkJggg==");
+  image-rendering: pixelated;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar-button:hover:active {
+  border: 1px solid #808080;
+  box-shadow: none;
+}
+
+::-webkit-scrollbar-button:disabled {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAJCAYAAABaMo5wAAAAYElEQVQ4T2NkGGSAcZC5h4EmDmpoaPjf0NBAlNnoauGaQBLooYXLUEIWwswi5Chs6lB8gewofI6BOZwWajCCFZ/viQ1FqoUQtRI4oShFtgdnGqKWYyg1h6icQKklpOgHAM9mQArEvm5+AAAAAElFTkSuQmCC"), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAJCAYAAABaMo5wAAAAYElEQVQ4T2NkGGSAcZC5h4EmDvr///9/RkZGosxGVwvXBJJADy1chhKyEGYWIUdhU4fiC2RH4XMMzOG0UIMRrPh8T2woUi2EqJXACUUpsj040xC1HEOpOUTlBEotIUU/AKXFQAqyTJ6DAAAAAElFTkSuQmCC");
+}
+
+::-webkit-scrollbar-button:horizontal:decrement:disabled {
+  background-position: -26px 1px, -25px 2px;
+}
+
+::-webkit-scrollbar-button:horizontal:increment:disabled {
+  background-position: -17px 1px, -16px 2px;
+}
+
+::-webkit-scrollbar-button:vertical:decrement:disabled {
+  background-position: -8px 1px, -7px 2px;
+}
+
+::-webkit-scrollbar-button:vertical:increment:disabled {
+  background-position: 1px 1px, 2px 2px;
+}
+
+::-webkit-scrollbar-button:horizontal:decrement {
+  background-position: -26px 1px;
+}
+
+::-webkit-scrollbar-button:horizontal:increment {
+  background-position: -17px 1px;
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+  background-position: -8px 1px;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+  background-position: 1px 1px;
+}
+
+::-webkit-scrollbar-track-piece:hover:active {
+  background-color: #fff;
+  background-blend-mode: difference;
+}
+
+::-webkit-scrollbar-track-piece:increment {
+  background-position: bottom;
+}
+
+::-webkit-scrollbar-button:start:increment,
+::-webkit-scrollbar-button:end:decrement {
+  display: none;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: max(1.8rem, env(safe-area-inset-top));
+  padding-right: max(1.8rem, env(safe-area-inset-right));
+  padding-bottom: max(1.8rem, env(safe-area-inset-bottom));
+  padding-left: max(1.8rem, env(safe-area-inset-left));
+  background: var(--bg, #fff);
+  color: var(--text, #000);
+  scroll-behavior: smooth;
+  font-size: var(--fsz-base);
+  line-height: 1.5;
+  overflow: scroll;
+}
+
+
+a {
+  padding-bottom: 0.125em;
+  text-decoration: none;
+  background: linear-gradient(90deg, #f00 0%, #ff9a00 10%, #d0de21 20%, #4fdc4a 30%, #3fdad8 40%, #2fc9e2 50%, #1c7fee 60%, #5f15f2 70%, #ba0cf8 80%, #fb07d9 90%, #f00 100%);
+  background-repeat: repeat-x;
+  background-size: 0;
+  background-position: center bottom;
+  color: var(--link, #0000f0);
+}
+
+a:visited {
+  color: var(--link-visited, #531a89);
+}
+
+a:focus,
+a:hover {
+  background-size: 200% var(--link-border-size);
+  animation: rainbow 1s linear infinite;
+}
+
+a:active,
+a:visited:active {
+  color: revert;
+}
+
+@media print {
+  a:link,
+  a:visited {
+    color: var(--text, #000) !important;
+  }
+
+  a[href^=http]::after {
+    content: " (" attr(href) ")";
+  }
+}

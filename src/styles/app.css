@@ -1,0 +1,78 @@
+main {
+  max-width: 55rem;
+}
+
+.main-title {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 1.1rem;
+  align-items: center;
+}
+
+.userpic {
+  width: 150px;
+  height: 100px;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1 1 31 18' width='150' height='100'%3E%3Cpath d='M27.973 3.123A3.578 3.578 0 0025.447.597C23.22 0 14.285 0 14.285 0S5.35 0 3.123.597A3.578 3.578 0 00.597 3.123C0 5.35 0 10 0 10s0 4.65.597 6.877a3.578 3.578 0 002.526 2.526C5.35 20 14.285 20 14.285 20s8.935 0 11.162-.597a3.578 3.578 0 002.526-2.526C28.57 14.65 28.57 10 28.57 10s-.002-4.65-.597-6.877z'/%3E%3C/svg%3E");
+}
+
+.userpic__noise {
+  width: 100%;
+  height: 100%;
+  background: #777;
+  cursor: help;
+}
+
+.caption {
+  position: fixed;
+  top: 0;
+  right: 2rem;
+  display: none;
+}
+
+@media print {
+  .caption {
+    display: revert;
+  }
+}
+
+.sub-title {
+  font-style: italic;
+}
+
+.top-info {
+  list-style-type: circle;
+}
+
+a.social-link {
+  display: inline-flex;
+  align-items: baseline;
+  padding-bottom: var(--link-border-size);
+}
+
+@media print {
+  a.social-link {
+    color: var(--text, #000) !important;
+  }
+}
+
+.social-link.gh {
+  color: inherit;
+}
+
+.social-link.tg {
+  color: #2aabee;
+}
+
+.social-link > svg {
+  align-self: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.job-duration {
+  font-size: var(--fsz-base);
+}
+
+footer {
+  margin-top: 4rem;
+}

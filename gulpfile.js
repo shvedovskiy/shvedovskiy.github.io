@@ -1,106 +1,98 @@
-const gulp = require('gulp');
+const {series, parallel, watch, src, dest} = require('gulp');
+const browserSync = require('browser-sync').create();
 const del = require('del');
-const run = require('run-sequence');
-const g = require('gulp-load-plugins')({
-  pattern: ['gulp-*']
-});
+const htmlMin = require('gulp-htmlmin');
+const gulpIf = require('gulp-if');
+const inject = require('gulp-inject');
+const postcss = require('gulp-postcss');
+const postcssImport = require('postcss-import');
+const postcssPresetEnv = require('postcss-preset-env');
+const cssnano = require('cssnano');
+const terser = require('gulp-terser');
+const eventStream = require('event-stream');
 
+const isProduction = process.env.NODE_ENV === 'production';
 const conf = {
   paths: {
     src: 'src',
     dist: 'dist',
-    css: [
-      'src/css/normalize.css',
-      'src/css/fonts.css',
-      'src/css/main.css',
-      '!node_modules/**/*.css'
-    ],
-    html: [
-      'src/*.html',
-      '!node_modules/**/*.html'
-    ],
-    js: [
-      'src/js/*.js',
-      '!node_modules/**/*.js'
-    ],
-    assets: [
-      'src/assets/**/*'
-    ]
+    html: 'src/**/*.html',
+    css: 'src/**/*.css',
+    cssEntry: 'src/styles/index.css',
+    js: 'src/**/*.js',
+    jsEntry: 'src/scripts/main.js',
+    assets: 'src/assets/**/*',
   },
   browsers: [
-    'last 2 Chrome versions',
-    'last 2 Edge versions',
-    'last 2 Firefox versions',
-    'Safari >= 8',
-    'iOS >= 8',
-    'IE 11'
-  ]
+    'last 2 versions',
+    'not dead',
+    '> 0.5%',
+  ],
 };
+const postCSSConfig = [
+  postcssImport(),
+  postcssPresetEnv({
+    browsers: conf.browsers,
+  }),
+  isProduction && cssnano({
+    preset: ['default', {
+      mergeIdents: true,
+      reduceIdents: true,
+    }]
+  }),
+].filter(Boolean);
 
-gulp.task('css', () =>
-  gulp.src(conf.paths.css)
-    .pipe(g.importCss())
-    .pipe(g.autoprefixer({
-      browsers: conf.browsers,
-      cascade: false
+function clean() {
+  return del(conf.paths.dist, {force: true});
+}
+
+function index(cb) {
+  const css = src(conf.paths.cssEntry)
+    .pipe(postcss(postCSSConfig));
+
+  const js = src(conf.paths.jsEntry)
+    .pipe(gulpIf(isProduction, terser({
+      toplevel: true,
+    })));
+
+  src(conf.paths.html)
+    .pipe(inject(eventStream.merge(css, js), {
+      transform(filepath, file) {
+        if (filepath.endsWith('.css')) {
+          return `<style>${file.contents.toString('utf8')}</style>`;
+        } else if (filepath.endsWith('.js')) {
+          return `<script>${file.contents.toString('utf8')}</script>`;
+        }
+      },
     }))
-    .pipe(g.concatCss('main.css'))
-    .pipe(g.cleanCss({
-      compatibility: '*',
-      rebase: false
-    }))
-    .pipe(gulp.dest(conf.paths.dist))
-);
+    .pipe(gulpIf(isProduction, htmlMin({
+      collapseBooleanAttributes: true,
+      collapseInlineTagWhitespace: false,
+      collapseWhitespace: true,
+      removeComments: true,
+      removeEmptyAttributes: true,
+      removeRedundantAttributes: true,
+    })))
+    .pipe(dest(conf.paths.dist));
+  cb();
+}
 
-gulp.task('html', () =>
-  gulp.src(conf.paths.html)
-    .pipe(g.minifyHtml({
-      empty: true,
-      spare: true,
-      quotes: true
-    }))
-    .pipe(gulp.dest(conf.paths.dist))
-);
+function assets(cb) {
+  src(conf.paths.assets, { base: conf.paths.src })
+    .pipe(dest(conf.paths.dist))
+    .pipe(browserSync.stream());
+  cb();
+}
 
-gulp.task('js', () =>
-  gulp.src(conf.paths.js)
-    .pipe(g.uglify())
-    .pipe(gulp.dest(conf.paths.dist))
-);
-
-gulp.task('assets', () =>
-  gulp.src(conf.paths.assets, { base: conf.paths.src })
-    .pipe(gulp.dest(conf.paths.dist))
-);
-
-
-gulp.task('clean', cb =>
-  del([
-    conf.paths.dist
-  ], { force: true }, cb)
-);
-
-gulp.task('watch', () => {
-  gulp.watch(conf.paths.css, () => {
-    run('css');
+function serve() {
+  browserSync.init({
+    open: false,
+    notify: false,
+    server: conf.paths.dist,
   });
-  gulp.watch(conf.paths.html, () => {
-    run('html');
-  });
-  gulp.watch(conf.paths.js, () => {
-    run('js');
-  });
-  gulp.watch(conf.paths.assets, () => {
-    run('assets');
-  });
-});
+  watch([conf.paths.html, conf.paths.css, conf.paths.js], index).on('change', browserSync.reload);
+  watch(conf.paths.assets, assets);
+}
 
-gulp.task('prepare', cb => {
-  run(['css', 'html', 'js', 'assets'], cb);
-});
-
-gulp.task('build', ['clean'], cb => {
-  run('prepare', cb);
-});
-
-gulp.task('default', ['watch']);
+exports.serve = series(clean, parallel(index, assets), serve);
+exports.default = series(clean, parallel(index, assets));
