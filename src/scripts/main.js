@@ -1,3 +1,6 @@
+const now = document.getElementById('now');
+now.innerText = new Date().getFullYear();
+
 const CANVAS_WIDTH = 150;
 const CANVAS_HEIGHT = 100;
 
